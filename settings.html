@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Twister</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse"><stop stop-color="#ff9800"/><stop offset="1" stop-color="#e040fb"/></linearGradient></defs><rect x="16" y="16" width="224" height="224" rx="56" stroke="url(#g)" stroke-width="16" fill="none"/><rect x="48" y="64" width="160" height="16" rx="8" fill="url(#g)"/><rect x="64" y="96" width="128" height="16" rx="8" fill="url(#g)"/><rect x="80" y="128" width="96" height="16" rx="8" fill="url(#g)"/><rect x="96" y="160" width="64" height="16" rx="8" fill="url(#g)"/><rect x="112" y="192" width="32" height="16" rx="8" fill="url(#g)"/></svg>
+                <span>Twister</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Feed</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="page-settings">
+                <h2>Preferences</h2>
+                <form id="settings-form" class="form-card">
+                    <label for="settings-username">Username</label>
+                    <input type="text" id="settings-username" placeholder="Choose a unique username">
+                    
+                    <label for="settings-displayname">Display Name</label>
+                    <input type="text" id="settings-displayname" placeholder="What should people call you?">
+                    
+                    <label for="settings-bio">Biography</label>
+                    <textarea id="settings-bio" rows="3" placeholder="Tell everyone a little about yourself"></textarea>
+                    
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
