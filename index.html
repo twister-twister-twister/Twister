@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twister</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <!-- Twister Logo SVG -->
+            <svg width="40" height="40" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="twister-gradient" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ff9800"/>
+                        <stop offset="1" stop-color="#e040fb"/>
+                    </linearGradient>
+                </defs>
+                <rect x="16" y="16" width="224" height="224" rx="56" stroke="url(#twister-gradient)" stroke-width="16" fill="none"/>
+                <rect x="48" y="64" width="160" height="16" rx="8" fill="url(#twister-gradient)"/>
+                <rect x="64" y="96" width="128" height="16" rx="8" fill="url(#twister-gradient)"/>
+                <rect x="80" y="128" width="96" height="16" rx="8" fill="url(#twister-gradient)"/>
+                <rect x="96" y="160" width="64" height="16" rx="8" fill="url(#twister-gradient)"/>
+                <rect x="112" y="192" width="32" height="16" rx="8" fill="url(#twister-gradient)"/>
+            </svg>
+            <span>Twister</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" id="nav-feed">Feed</a></li>
+            <li><a href="#" id="nav-explore">Explore</a></li>
+            <li><a href="#" id="nav-chat">Chat</a></li>
+            <li><a href="#" id="nav-profile">Profile</a></li>
+            <li><a href="#" id="nav-settings">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="page-feed" class="page active">
+            <h2>Feed</h2>
+            <div id="feed-posts"></div>
+            <form id="post-form">
+                <input type="text" id="post-content" placeholder="What's happening?" maxlength="280" required>
+                <button type="submit">Twist</button>
+            </form>
+        </section>
+        <section id="page-explore" class="page">
+            <h2>Explore</h2>
+            <input type="text" id="explore-search" placeholder="Search Twister...">
+            <div id="explore-results"></div>
+        </section>
+        <section id="page-chat" class="page">
+            <h2>Chat</h2>
+            <div id="chat-list"></div>
+            <div id="chat-window" style="display:none;">
+                <div id="chat-messages"></div>
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Type a message..." required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+        <section id="page-profile" class="page">
+            <h2>Profile</h2>
+            <div id="profile-info"></div>
+            <div id="profile-posts"></div>
+        </section>
+        <section id="page-settings" class="page">
+            <h2>Prefrences</h2>
+            <form id="settings-form">
+                <label>Name: <input type="text" id="settings-displayname"></label><br>
+                <label>Biography: <textarea id="settings-bio"></textarea></label><br>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
 
